@@ -1,0 +1,12 @@
+*.pyc
+*.swo
+*.swp
+*.swn
+
+*.sqlite3
+
+logs/
+
+digital_animals/digital_animals/settings.py
+
+*~
