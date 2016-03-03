@@ -1,0 +1,124 @@
+# Benefit
+
+- model: website.Benefit
+  pk: 1
+  fields:
+    title: Эффективные решения
+    text: >
+        Зачастую самое простое решение является самым эффективным. Мы отсекаем
+        все лишнее и выделяем наиболее существенные аспекты представления наших
+        клиентов в Сети, в результате чего пользователи сразу получают всю
+        необходимую информацию о Вашей деятельности
+    icon: icon-processor
+
+- model: website.Benefit
+  pk: 2
+  fields:
+    title: Быстрый цикл разработки
+    text: >
+        Наши специалисты конструктивно подходят к решению задачи создания сайта
+        в рамках существующих и наиболее перспективных решений. Лучшие и
+        проверенные практики разработки позволяют в наиболее сжатые сроки пройти
+        путь от планирования до реализации
+    icon: icon-settings
+
+- model: website.Benefit
+  pk: 3
+  fields:
+    title: Приемлемая стоимость
+    text: >
+        При создании сайта важно осознавать соотношение цены с
+        результативностью. За счет адаптации под определенные категории наиболее
+        затратных процессов разработки и использования доступный технологических
+        компонентов мы можем предложить крайне демократичные цены на свой
+        продукт
+    icon: icon-cash
+
+# Feature
+
+- model: website.Feature
+  pk: 1
+  fields:
+    title: Креативные специалисты
+    text: >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A qui incidunt
+        sequi laboriosam deserunt
+    image: creative.jpg
+
+- model: website.Feature
+  pk: 2
+  fields:
+    title: Внушительный инструментарий
+    text: >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    image: workspace.jpg
+
+- model: website.Feature
+  pk: 3
+  fields:
+    title: Знание своего дела
+    text: >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A qui incidunt
+        sequi laboriosam deserunt, quaerat assumenda alias distinctio autem, cum
+        nobis aliquam
+    image: code.jpg
+
+# Step
+
+- model: website.Step
+  pk: 1
+  fields:
+    title: Рисуем дизайн
+    icon: icon-paint
+
+- model: website.Step
+  pk: 2
+  fields:
+    title: Верстаем макет
+    icon: icon-layout
+
+- model: website.Step
+  pk: 3
+  fields:
+    title: Добавляем плюшки
+    icon: icon-cookies
+
+- model: website.Step
+  pk: 4
+  fields:
+    title: Программируем бизнес логику
+    icon: icon-code
+
+# Pricing
+
+- model: website.Pricing
+  pk: 1
+  fields:
+    category: Персональный-сайт
+    price: 10000.00
+
+- model: website.Pricing
+  pk: 2
+  fields:
+    category: Корпоративный-портал
+    price: 20000.00
+
+- model: website.Pricing
+  pk: 3
+  fields:
+    category: Интернет-магазин
+    price: 30000.00
+
+- model: website.Pricing
+  pk: 4
+  fields:
+    category: Промо
+    price: 25000.00
+
+# Contact
+
+- model: website.Contact
+  pk: 1
+  fields:
+    email: makeweb@digital-animals.com.ua
+    phone: +380 (44) 999 99 99
