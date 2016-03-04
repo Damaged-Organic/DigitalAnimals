@@ -1,11 +1,217 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 
-{% block meta %}{% endblock %}
+{% load staticfiles i18n website_filters %}
 
-{% block stylesheets %}{% endblock %}
-
-{% block body %}
-    Hello!
+{% block title %}
+    {% trans 'constant.company_name' %} - something
 {% endblock %}
 
-{% block javascripts %}{% endblock %}
+{% block meta %}
+    {{ block.super }}
+    <meta name="Description" content="Описание необходимых мета-тегов">
+    <meta name=“robots” content=“index,follow,noarchive”>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'website/css/home.bundle.min.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <div id="preloader">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div id="cross-lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        {% include 'website/components/landscape.html' %}
+
+        {% include 'website/components/header.html' %}
+
+        <main id="content">
+            <section class="outer hero-holder">
+                <div id="hero-background-holder">
+                    <div class="part"></div>
+                    <div class="part"></div>
+                    <div class="part"></div>
+                    <div class="part"></div>
+                    <div class="part"></div>
+                </div>
+                <div class="inner">
+                    <span class="upper-title">{% trans 'index.hero.workshop' %}</span>
+                    <h1>
+                        <span class="lane">
+                            <span>D</span>
+                            <span>i</span>
+                            <span>g</span>
+                            <span>i</span>
+                            <span>t</span>
+                            <span>a</span>
+                            <span>l</span>
+                        </span>
+                        <span class="lane">
+                            <span>A</span>
+                            <span>n</span>
+                            <span>i</span>
+                            <span>m</span>
+                            <span>a</span>
+                            <span>l</span>
+                            <span>s</span>
+                        </span>
+                    </h1>
+                    <p class="lower-title">{% trans 'index.hero.slogan' %}</p>
+                    <div class="btn">
+                        <span class="substrate"></span>
+                        <a href="{% url 'website:order' %}">{% trans 'index.hero.action' %}</a>
+                    </div>
+                </div>
+                <div id="scroll-down">
+                    <div class="line-holder">
+                        <span class="line"></span>
+                    </div>
+                    <span class="text">{% trans 'index.hero.scroll_down' %}</span>
+                </div>
+            </section>
+            <section class="outer benefits-holder scroll-holder">
+                <div class="background-parts-holder">
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                </div>
+                <span class="parallax-holder parallax-letter" data-shift-top="-400" data-shift-bottom="200" data-speed-ratio="3.25">D</span>
+                <div class="inner">
+                    <h2>{% trans 'index.benefit.title' %}</h2>
+
+                    {% for benefit in benefits %}
+                        <article class="benefits-item scroll-holder">
+                            <span class="{{ benefit.icon }} parallax-holder parallax-icon" data-shift-top="-40" data-shift-bottom="40" data-speed-ratio="10.25"></span>
+                            <span class="benefit-bg"></span>
+                            <span class="benefit-bg upper"></span>
+                            <div class="item">
+                                <h3>{{ benefit.title }}</h3>
+                                <p>{{ benefit.text }}</p>
+                            </div>
+                        </article>
+                    {% endfor %}
+
+                </div>
+            </section>
+            <section class="outer features-holder scroll-holder">
+                <span class="parallax-holder parallax-letter right top" data-shift-top="-350" data-shift-bottom="250" data-speed-ratio="3.25">A</span>
+                <div class="inner">
+                    <span class="sprtr"></span>
+                    <h2 class="black">{% trans 'index.feature.title' %}</h2>
+
+                    {% for feature in features %}
+                        <article class="item scroll-holder {% cycle '' 'reverse' %}">
+                            <figure class="parallax-holder" data-shift-top="-40" data-shift-bottom="160" data-speed-ratio="3.75">
+                                <img src="{% static 'website/images/'|add:feature.image %}" alt="{{ feature.title }}">
+                            </figure>
+                            <div class="info-holder parallax-holder" data-shift-top="-200" data-shift-bottom="100" data-speed-ratio="2.5">
+                                <span class="info-bg"></span>
+                                <div class="info">
+                                    <h3>{{ feature.title }}</h3>
+                                    <p>{{ feature.text }}</p>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+
+                </div>
+            </section>
+            <section class="outer project-sequence-holder scroll-holder">
+                <div class="background-parts-holder reverse">
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                </div>
+                <span class="parallax-holder parallax-letter top" data-shift-top="-350" data-shift-bottom="250" data-speed-ratio="3.25">S</span>
+                <div class="inner">
+                    <h2 class="black">{% trans 'index.step.title' %}</h2>
+                    <p>{% trans 'index.step.text' %}</p>
+
+                    {% for step in steps %}
+                        <div class="item scroll-holder">
+                            <h3>{{ step.title }}</h3>
+                            <span class="{{ step.icon }} parallax-holder parallax-icon" data-shift-top="-80" data-shift-bottom="80" data-speed-ratio="10.25"></span>
+                        </div>
+                    {% endfor %}
+
+                    <span class="project-ready">{% trans 'index.step.conclusion' %}</span>
+                </div>
+                <span class="icon-smile parallax-holder parallax-icon" data-shift-top="-160" data-shift-bottom="80" data-speed-ratio="4.25"></span>
+            </section>
+            <section class="outer price-holder scroll-holder">
+                <div class="inner">
+                    <span class="sprtr"></span>
+                    <h2 class="black">{% trans 'index.pricing.title' %}</h2>
+
+                    {% for pricing in pricings %}
+                        <div class="item-holder scroll-holder {% cycle '' 'reverse' %}">
+                            <div class="item">
+                                <p>
+                                    <span>{{ pricing.category }}</span>
+                                    {% trans 'common.from' %}
+                                    <span>{{ pricing.price }}</span> UAH
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <span class="parallax-holder parallax-logo" data-shift-top="-150" data-shift-bottom="350" data-speed-ratio="9.25">
+                    <img src="{% static 'website/images/parallax-logo.png' %}" alt="logo">
+                </span>
+            </section>
+            <section class="outer contact-holder scroll-holder">
+                <div class="background-parts-holder">
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                </div>
+                <div class="inner">
+                    <h2>{% trans 'index.contact.title' %}</h2>
+                    <div class="item-holder scroll-holder">
+                        <div class="item">
+                            <p>{% trans 'index.contact.phone' %} <a href="tel:+{{ contact.phone|sift_digits }}">{{ contact.phone }}</a></p>
+                        </div>
+                    </div>
+                    <div class="item-holder scroll-holder reverse">
+                        <div class="item">
+                            <p>{% trans 'index.contact.email' %} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+                        </div>
+                    </div>
+                    <div class="item-holder scroll-holder">
+                        <div class="item">
+                            <p>{% trans 'index.contact.download' %} <a href="#">{% trans 'index.contact.brief' %}</a></p>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <span class="substrate"></span>
+                        <a href="{% url 'website:order' %}">{% trans 'index.contact.action' %}</a>
+                    </div>
+                </div>
+            </section>
+
+            {% include 'website/components/footer.html' %}
+
+        </main>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{% static 'website/js/home.bundle.min.js' %}"></script>
+{% endblock %}

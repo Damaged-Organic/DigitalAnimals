@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-04 16:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: website/templates/website/components/footer.html:5
+#: website/templates/website/components/header.html:5
+#: website/templates/website/errors/layout.html:12
+#: website/templates/website/index.html:6
+#: website/templates/website/order.html:6
+msgid "constant.company_name"
+msgstr "Digital Animals"
+
+#: website/templates/website/components/footer.html:8
+msgid "footer.credentials"
+msgstr ""
+"© Digital Animals, %s. Использование собственных материалов сайта без "
+"согласия владельца запрещено."
+
+#: website/templates/website/components/landscape.html:5
+msgid "common.landscape_orientation"
+msgstr "Переверни меня назад!"
+
+#: website/templates/website/errors/400.html:21
+msgid "error.400"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
+"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
+"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+
+#: website/templates/website/errors/403.html:21
+msgid "error.403"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
+"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
+"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+
+#: website/templates/website/errors/404.html:21
+msgid "error.404"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
+"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
+"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+
+#: website/templates/website/errors/500.html:21
+msgid "error.500"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
+"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
+"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+
+#: website/templates/website/errors/layout.html:32
+msgid "error.get_out"
+msgstr "уходим отсюда"
+
+#: website/templates/website/index.html:48
+msgid "index.hero.workshop"
+msgstr "Мастерская хороших сайтов"
+
+#: website/templates/website/index.html:69
+msgid "index.hero.slogan"
+msgstr "с нами развивается сеть"
+
+#: website/templates/website/index.html:72
+msgid "index.hero.action"
+msgstr "Работать с нами"
+
+#: website/templates/website/index.html:79
+msgid "index.hero.scroll_down"
+msgstr "листайте ниже"
+
+#: website/templates/website/index.html:92
+msgid "index.benefit.title"
+msgstr "Почему мы"
+
+#: website/templates/website/index.html:112
+msgid "index.feature.title"
+msgstr "Наши плюшки"
+
+#: website/templates/website/index.html:141
+msgid "index.step.title"
+msgstr "Решаем задачу клиента"
+
+#: website/templates/website/index.html:142
+msgid "index.step.text"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae "
+"consequatur explicabo assumenda tempore. Repudiandae commodi ad, unde "
+"explicabo dolor consequuntur eum distinctio enim dolorem deleniti."
+
+#: website/templates/website/index.html:151
+msgid "index.step.conclusion"
+msgstr "Проект готов"
+
+#: website/templates/website/index.html:158
+msgid "index.pricing.title"
+msgstr "Поговорим о ценах"
+
+#: website/templates/website/index.html:165
+msgid "common.from"
+msgstr "от"
+
+#: website/templates/website/index.html:186
+msgid "index.contact.title"
+msgstr "Работаем?"
+
+#: website/templates/website/index.html:189
+msgid "index.contact.phone"
+msgstr "Позвонить нам"
+
+#: website/templates/website/index.html:194
+msgid "index.contact.email"
+msgstr "Написать нам"
+
+#: website/templates/website/index.html:199
+msgid "index.contact.download"
+msgstr "Скачать"
+
+#: website/templates/website/index.html:199
+msgid "index.contact.brief"
+msgstr "бриф"
+
+#: website/templates/website/index.html:204
+msgid "index.contact.action"
+msgstr "Онлайн заявка"
+
+#: website/templates/website/order.html:42
+msgid "order.get_back"
+msgstr "Вернуться назад"
+
+#: website/templates/website/order.html:51
+msgid "order.title"
+msgstr "Напишите нам"
+
+#: website/templates/website/order.html:71
+msgid "order.submit"
+msgstr "Отправить"

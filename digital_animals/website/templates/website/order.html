@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles i18n %}
+
+{% block title %}
+    {% trans 'constant.company_name' %} - something
+{% endblock %}
+
+{% block meta %}
+    {{ block.super }}
+    <meta name="Description" content="Описание необходимых мета-тегов">
+    <meta name=“robots” content=“index,follow,archive”>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'website/css/feedback.bundle.min.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <div id="preloader">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div id="cross-lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div id="loader">
+            <span></span>
+            <span></span>
+        </div>
+
+        {% include 'website/components/landscape.html' %}
+
+        <main id="content">
+            <section class="outer feedback-holder">
+                <a href="{% url 'website:index' %}" class="back-button">{% trans 'order.get_back' %}</a>
+                <div class="background-parts-holder">
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                    <div class="bg-part"></div>
+                </div>
+                <div class="inner">
+                    <h2>{% trans 'order.title' %}</h2>
+                    <form action="{% url 'website:order' %}" method="POST" id="feedback-form">
+                        <div class="field-holder">
+                            {{ form.name.label_tag }}
+                            {{ form.name }}
+                        </div>
+
+                        <div class="field-holder">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                        <div class="field-holder">
+                            {{ form.phone.label_tag }}
+                            {{ form.phone }}
+                        </div>
+                        <div class="field-holder">
+                            {{ form.message }}
+                        </div>
+                        <button type="submit" class="btn">
+                            <span class="substrate"></span>
+                            <span class="title">{% trans 'order.submit' %}</span>
+                        </button>
+                    </form>
+                </div>
+                <div id="response-holder"></div>
+            </section>
+        </main>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{% static 'website/js/feedback.bundle.min.js' %}"></script>
+{% endblock %}

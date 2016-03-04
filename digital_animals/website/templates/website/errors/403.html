@@ -1,0 +1,22 @@
+{% extends 'website/errors/layout.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    403 - Forbidden
+{% endblock %}
+
+{% block meta %}
+    {{ block.super }}
+    <meta name="Description" content="403 - Forbidden">
+    <meta name=“robots” content=“noindex,nofollow,noarchive”>
+{% endblock %}
+
+{% block error_code %}
+    403
+{% endblock %}
+
+{% block error_description %}
+    <h1>Forbidden</h1>
+    <p>{% trans 'error.403' %}</p>
+{% endblock %}

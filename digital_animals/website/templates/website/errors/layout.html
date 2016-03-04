@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles i18n %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'website/css/404.bundle.min.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <header id="header">
+            <div class="logo"><img src="{% static 'website/images/logo.png' %}" alt="{% trans 'constant.company_name' %}"></div>
+        </header>
+        <div id="cross-lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        {% include 'website/components/landscape.html' %}
+
+        <main id="content">
+            <section class="outer not-found-holder">
+                <span>
+                    {% block error_code %}{% endblock %}
+                </span>
+                <div class="inner">
+                    {% block error_description %}{% endblock %}
+                    <div class="btn">
+                        <span class="substrate"></span>
+                        <a href="{% url 'website:index' %}">{% trans 'error.get_out' %}</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+{% endblock %}

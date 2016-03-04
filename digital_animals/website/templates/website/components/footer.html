@@ -1,0 +1,11 @@
+{% load staticfiles i18n website_filters %}
+
+<footer id="footer">
+    <div class="logo">
+        <img src="{% static 'website/images/logo.png' %}" alt="{% trans 'constant.company_name' %}">
+    </div>
+    <small>
+        {% trans 'footer.credentials' as footer_credentials %}
+        {{ footer_credentials|interpolate_with_timeline:"2016" }}
+    </small>
+</footer>

@@ -34,10 +34,6 @@ class Pricing(models.Model):
     def __str__(self):
         return self.category
 
-    @property
-    def price_signed(self):
-        return "%s ₴" % self.price
-
 
 class Contact(models.Model):
     email = models.EmailField(max_length=254)

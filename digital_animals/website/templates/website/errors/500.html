@@ -1,0 +1,22 @@
+{% extends 'website/errors/layout.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    500 - Internal Server Error
+{% endblock %}
+
+{% block meta %}
+    {{ block.super }}
+    <meta name="Description" content="500 - Internal Server Error">
+    <meta name=“robots” content=“noindex,nofollow,noarchive”>
+{% endblock %}
+
+{% block error_code %}
+    500
+{% endblock %}
+
+{% block error_description %}
+    <h1>Internal Server Error</h1>
+    <p>{% trans 'error.500' %}</p>
+{% endblock %}
