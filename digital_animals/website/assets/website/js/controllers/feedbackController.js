@@ -25,6 +25,9 @@ class FeedbackController{
 
         fetch(formUrl, {
             method: "POST",
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
             body: formData
         })
         .then(this._checkStatus)
@@ -36,7 +39,7 @@ class FeedbackController{
     }
     _checkStatus(res){
         hasErrors = (res.ok && res.status === 200) ? false : true;
-        
+
         return res;
     }
     _getJson(res){

@@ -1,8 +1,11 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.shortcuts import get_list_or_404, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Benefit, Feature, Step, Pricing, Contact
 from .forms import OrderForm
+
 
 def index(request):
     benefits = get_list_or_404(Benefit)
@@ -20,8 +23,18 @@ def index(request):
     })
 
 
+@csrf_exempt
 def order(request):
-    form = OrderForm()
+    if request.method == 'POST' and request.is_ajax():
+        form = OrderForm(request.POST)
+
+        if form.is_valid():
+            form.send_email()
+            return JsonResponse({'message': 'valid'})
+        else:
+            return JsonResponse({'message': 'invalid'})
+    else:
+        form = OrderForm()
 
     return render(request, 'website/order.html', {
         'form': form
