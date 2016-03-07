@@ -31,6 +31,9 @@ class Pricing(models.Model):
     category = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=8, decimal_places=2)
 
+    class Meta:
+        verbose_name_plural = 'Pricing'
+
     def __str__(self):
         return self.category
 

@@ -1,9 +1,12 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.shortcuts import get_list_or_404, get_object_or_404
+from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Benefit, Feature, Step, Pricing, Contact
+from .models import (
+    Benefit, Feature, Step, Pricing, Contact
+)
 from .forms import OrderForm
 
 
@@ -30,9 +33,9 @@ def order(request):
 
         if form.is_valid():
             form.send_email()
-            return JsonResponse({'message': 'valid'})
+            return JsonResponse({'message': _('order.response.valid')})
         else:
-            return JsonResponse({'message': 'invalid'})
+            return JsonResponse({'message': _('order.response.invalid')})
     else:
         form = OrderForm()
 

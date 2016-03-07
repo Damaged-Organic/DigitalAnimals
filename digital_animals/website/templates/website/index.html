@@ -1,15 +1,15 @@
 {% extends 'layout.html' %}
 
-{% load staticfiles i18n website_filters %}
+{% load staticfiles i18n humanize website_filters %}
 
 {% block title %}
-    {% trans 'constant.company_name' %} - something
+    {% trans 'constant.company_name' %} - {{ METADATA.title }}
 {% endblock %}
 
 {% block meta %}
     {{ block.super }}
-    <meta name="Description" content="Описание необходимых мета-тегов">
-    <meta name=“robots” content=“index,follow,noarchive”>
+    <meta name="Description" content="{{ METADATA.description }}">
+    <meta name=“robots” content="{{ METADATA.robots }}">
 {% endblock %}
 
 {% block stylesheets %}
@@ -163,7 +163,7 @@
                                 <p>
                                     <span>{{ pricing.category }}</span>
                                     {% trans 'common.from' %}
-                                    <span>{{ pricing.price }}</span> UAH
+                                    <span>{{ pricing.price|floatformat:"0"|intcomma }}</span> грн
                                 </p>
                             </div>
                         </div>

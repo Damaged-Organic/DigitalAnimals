@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 
 
 class OrderForm(forms.Form):
@@ -84,33 +85,18 @@ class OrderForm(forms.Form):
         }
 
     def send_email(self):
-        send_mail(
-            'Subject',
-            ''.join([
-                self.cleaned_data['message'],
-                ' ',
-                self.cleaned_data['email'],
-                ' ',
-                self.cleaned_data['phone']
-            ]),
+        html = render_to_string('website/emails/order.html', {
+            'name': self.cleaned_data['name'],
+            'email': self.cleaned_data['email'],
+            'phone': self.cleaned_data['phone'],
+            'message': self.cleaned_data['message'],
+        })
+
+        message = EmailMessage(
+            _('email.order.subject'),
+            html,
             'webmaster@cheers-development.in.ua',
-            ['webmaster@cheers-development.in.ua'],
-            fail_silently=False
+            ['webmaster@cheers-development.in.ua']
         )
-
-"""
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
-
-
-msg_plain = render_to_string('templates/email.txt', {'some_params': some_params})
-msg_html = render_to_string('templates/email.html', {'some_params': some_params})
-
-send_mail(
-    'email title',
-    msg_plain,
-    'some@sender.com',
-    ['some@receiver.com'],
-    html_message=msg_html,
-)
-"""
+        message.content_subtype = 'html'
+        message.send()

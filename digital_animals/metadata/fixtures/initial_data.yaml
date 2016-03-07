@@ -1,0 +1,17 @@
+# Metadata
+
+- model: metadata.Metadata
+  pk: 1
+  fields:
+    url_name:    index
+    title:       Мастерская хороших сайтов
+    description: Описание
+    robots:      index,follow,archive
+
+- model: metadata.Metadata
+  pk: 2
+  fields:
+    url_name:    order
+    title:       Написать нам
+    description: Описание
+    robots:      noindex,follow,noarchive

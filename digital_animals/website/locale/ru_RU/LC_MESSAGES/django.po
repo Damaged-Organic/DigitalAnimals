@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-05 14:44+0200\n"
+"POT-Creation-Date: 2016-03-06 16:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,83 +17,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: website/forms.py:21
+#: website/forms.py:23
 msgid "order.name.label"
 msgstr "Имя"
 
-#: website/forms.py:23
+#: website/forms.py:25
 msgid "order.name.placeholder"
 msgstr "Введите имя"
 
-#: website/forms.py:25 website/forms.py:32
+#: website/forms.py:27 website/forms.py:34
 msgid "error_messages.name.required"
 msgstr "Мы все еще не знаем, как к вам обращаться"
 
-#: website/forms.py:27 website/forms.py:33
+#: website/forms.py:29 website/forms.py:35
 msgid "error_messages.name.min_length"
 msgstr "Слишком короткое имя; возможно, вы ошиблись?"
 
-#: website/forms.py:29 website/forms.py:34
+#: website/forms.py:31 website/forms.py:36
 msgid "error_messages.name.max_length"
 msgstr "Слишком длинное имя; возможно, вы ошиблись?"
 
-#: website/forms.py:38
+#: website/forms.py:40
 msgid "order.email.label"
 msgstr "E-mail"
 
-#: website/forms.py:40
+#: website/forms.py:42
 msgid "order.email.placeholder"
 msgstr "Введите почтовый адрес"
 
-#: website/forms.py:42 website/forms.py:49
+#: website/forms.py:44 website/forms.py:51
 msgid "error_messages.email.required"
 msgstr "Мы все еще не знаем, куда вам написать ответ"
 
-#: website/forms.py:44 website/forms.py:50
+#: website/forms.py:46 website/forms.py:52
 msgid "error_messages.email.invalid"
 msgstr "Странный электронный адрес, что-то с ним не так"
 
-#: website/forms.py:46 website/forms.py:51
+#: website/forms.py:48 website/forms.py:53
 msgid "error_messages.email.max_length"
 msgstr "Слишком длинный электронный адрес; возможно, вы ошиблись?"
 
-#: website/forms.py:55
+#: website/forms.py:57
 msgid "order.phone.label"
 msgstr "Телефон"
 
-#: website/forms.py:57
+#: website/forms.py:59
 msgid "order.phone.placeholder"
 msgstr "Введите номер телефона"
 
-#: website/forms.py:59 website/forms.py:65
+#: website/forms.py:61 website/forms.py:67
 msgid "error_messages.phone.required"
 msgstr "Мы все еще не знаем, как к вам дозвониться"
 
-#: website/forms.py:61 website/forms.py:66
+#: website/forms.py:63 website/forms.py:68
 msgid "error_messages.phone.max_length"
 msgstr "Слишком длинный номер телефона; возможно, вы ошиблись?"
 
-#: website/forms.py:71
+#: website/forms.py:73
 msgid "order.message.placeholder"
 msgstr "Введите сообщение"
 
-#: website/forms.py:73 website/forms.py:80
+#: website/forms.py:75 website/forms.py:82
 msgid "error_messages.message.required"
 msgstr "Мы не знаем, что вам ответить на это"
 
-#: website/forms.py:75 website/forms.py:81
+#: website/forms.py:77 website/forms.py:83
 msgid "error_messages.message.min_length"
 msgstr "Не могли бы вы написать более подробне сообщение?"
 
-#: website/forms.py:77 website/forms.py:82
+#: website/forms.py:79 website/forms.py:84
 msgid "error_messages.message.max_length"
 msgstr "Не могли бы вы написать более краткое сообщение?"
+
+#: website/forms.py:96
+msgid "email.order.subject"
+msgstr "Сообщение обратной связи"
 
 #: website/templates/website/components/footer.html:5
 #: website/templates/website/components/header.html:5
 #: website/templates/website/errors/layout.html:12
 #: website/templates/website/index.html:6
-#: website/templates/website/order.html:6
+#: website/templates/website/order.html:7
 msgid "constant.company_name"
 msgstr "Digital Animals"
 
@@ -106,6 +110,15 @@ msgstr ""
 #: website/templates/website/components/landscape.html:5
 msgid "common.landscape_orientation"
 msgstr "Переверни меня назад!"
+
+#: website/templates/website/emails/order.html:4
+msgid "email.order.title"
+msgstr "Нам кто-то написал!"
+
+#: website/templates/website/emails/order.html:7
+#, python-format
+msgid "Новое сообщение обратной связи от %(name)s (%(email)s, %(phone)s):"
+msgstr ""
 
 #: website/templates/website/errors/400.html:21
 msgid "error.400"
@@ -210,14 +223,22 @@ msgstr "бриф"
 msgid "index.contact.action"
 msgstr "Онлайн заявка"
 
-#: website/templates/website/order.html:42
+#: website/templates/website/order.html:44
 msgid "order.get_back"
 msgstr "Вернуться назад"
 
-#: website/templates/website/order.html:51
+#: website/templates/website/order.html:53
 msgid "order.title"
 msgstr "Напишите нам"
 
-#: website/templates/website/order.html:71
+#: website/templates/website/order.html:74
 msgid "order.submit"
 msgstr "Отправить"
+
+#: website/views.py:34
+msgid "order.response.valid"
+msgstr "Ваше сообщение было отправлено : )"
+
+#: website/views.py:36
+msgid "order.response.invalid"
+msgstr "Что-то пошло не так при отправке сообщения : ("

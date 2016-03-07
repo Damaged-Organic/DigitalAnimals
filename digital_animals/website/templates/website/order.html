@@ -1,15 +1,17 @@
 {% extends 'layout.html' %}
 
-{% load staticfiles i18n %}
+{% load staticfiles i18n metadata_tags %}
 
 {% block title %}
-    {% trans 'constant.company_name' %} - something
+    {% provide_metadata as metadata %}
+    {{ metadata.title }} | {% trans 'constant.company_name' %}
 {% endblock %}
 
 {% block meta %}
     {{ block.super }}
-    <meta name="Description" content="Описание необходимых мета-тегов">
-    <meta name=“robots” content=“index,follow,archive”>
+    {% provide_metadata as metadata %}
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name=“robots” content="{{ metadata.robots }}">
 {% endblock %}
 
 {% block stylesheets %}
