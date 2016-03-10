@@ -8,7 +8,7 @@
         Зачастую самое простое решение является самым эффективным. Мы отсекаем
         все лишнее и выделяем наиболее существенные аспекты представления наших
         клиентов в Сети, в результате чего пользователи сразу получают всю
-        необходимую информацию о Вашей деятельности
+        необходимую информацию о вашей деятельности
     icon: icon-processor
 
 - model: website.Benefit
@@ -41,8 +41,8 @@
   fields:
     title: Креативные специалисты
     text: >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A qui incidunt
-        sequi laboriosam deserunt
+        Изобретательность и конструктивные встречные предложения выделяют наших
+        специалистов на фоне простых исполнителей
     image: creative.jpg
 
 - model: website.Feature
@@ -50,7 +50,8 @@
   fields:
     title: Внушительный инструментарий
     text: >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        Мы используем богатый спектр современных веб-технологий, и предлагаем
+        лучшее решение в зависимости от ваших потребностей
     image: workspace.jpg
 
 - model: website.Feature
@@ -58,9 +59,8 @@
   fields:
     title: Знание своего дела
     text: >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A qui incidunt
-        sequi laboriosam deserunt, quaerat assumenda alias distinctio autem, cum
-        nobis aliquam
+        Умение найти подход в сочетании с обширным опытом создания сайтов делают
+        работу с нами приятной и продуктивной
     image: code.jpg
 
 # Step
@@ -86,7 +86,7 @@
 - model: website.Step
   pk: 4
   fields:
-    title: Программируем бизнес логику
+    title: Программируем бизнес-логику
     icon: icon-code
 
 # Pricing
@@ -94,13 +94,13 @@
 - model: website.Pricing
   pk: 1
   fields:
-    category: Персональный-сайт
+    category: Персональный сайт
     price: 10000.00
 
 - model: website.Pricing
   pk: 2
   fields:
-    category: Корпоративный-портал
+    category: Корпоративный сайт
     price: 20000.00
 
 - model: website.Pricing

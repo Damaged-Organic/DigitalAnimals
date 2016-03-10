@@ -51,8 +51,7 @@
                 </div>
                 <div class="inner">
                     <h2>{% trans 'order.title' %}</h2>
-                    <form action="{% url 'website:order' %}" method="POST" id="feedback-form">
-                        {% csrf_token %}
+                    <form action="{% url 'website:order_send' %}" method="POST" id="feedback-form">
                         <div class="field-holder">
                             {{ form.name.label_tag }}
                             {{ form.name }}

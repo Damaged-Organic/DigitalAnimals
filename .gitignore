@@ -5,10 +5,12 @@
 
 *.sqlite3
 
+__pycache__/
+
 logs/
 static/
 
-digital_animals/digital_animals/settings.py
+*/*/settings/production.py
 
 *~
 

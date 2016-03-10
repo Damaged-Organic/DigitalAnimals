@@ -6,6 +6,7 @@ from django.contrib.auth.admin import GroupAdmin, UserAdmin
 class DigitalAnimalAdminSite(admin.AdminSite):
     site_title = 'Digital Animals'
     site_header = 'Deus Ex Machina'
+    index_title = 'Digital Animals Administration'
 
 digital_animal_admin_site = DigitalAnimalAdminSite(name='deus_ex_machina')
 

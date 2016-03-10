@@ -6,6 +6,7 @@ import "es6-promise";
 import "jquery-validation";
 import "jquery-mask-plugin";
 
+import Cookies from "../lib/cookies";
 import Loader from "../lib/loader";
 import FeedbackController from "../controllers/feedbackController";
 
