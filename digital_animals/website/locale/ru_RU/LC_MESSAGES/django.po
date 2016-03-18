@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 19:00+0200\n"
+"POT-Creation-Date: 2016-03-11 14:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,7 +105,7 @@ msgstr "Digital Animals"
 msgid "footer.credentials"
 msgstr ""
 "© Digital Animals, %s. Использование собственных материалов сайта без "
-"согласия владельца запрещено."
+"согласия владельцев запрещено."
 
 #: website/templates/website/components/landscape.html:5
 msgid "common.landscape_orientation"
@@ -123,30 +123,28 @@ msgstr ""
 #: website/templates/website/errors/400.html:21
 msgid "error.400"
 msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
-"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
-"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+"К сожалению, экосистема данного сайта отказывается преобразовываться под "
+"влиянием данной непредвиденной мутации. Лучше будет выбрать более правильный "
+"путь."
 
 #: website/templates/website/errors/403.html:21
 msgid "error.403"
 msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
-"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
-"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+"Что-то мешает развитию в этом направлении. Если так случилось, не стоит "
+"сопротивляться - лучше вернуться к более доступным разделам сайта."
 
 #: website/templates/website/errors/404.html:21
 msgid "error.404"
 msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
-"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
-"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+"Эта ссылка - тупиковая ветвь сетевой эволюции. Что бы ни привело вас сюда, "
+"не теряйте времени и возвращайтесь к более важным разделам сайта."
 
 #: website/templates/website/errors/500.html:21
 msgid "error.500"
 msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem. Iure "
-"voluptatibus modi saepe natus eius quia dolor incidunt, ipsum hic velit "
-"autem minima deserunt, deleniti nesciunt? Velit, libero, minima."
+"Естественный отбор не всегда благосклонен к отдельным индивидам, и система "
+"отказывается адаптироваться под текущие обстоятельства. Возможно, несколько "
+"позже процесс восстановится."
 
 #: website/templates/website/errors/layout.html:32
 msgid "error.get_out"
@@ -216,7 +214,7 @@ msgstr "Скачать"
 
 #: website/templates/website/index.html:199
 msgid "index.contact.brief"
-msgstr "бриф"
+msgstr "презентацию"
 
 #: website/templates/website/index.html:204
 msgid "index.contact.action"

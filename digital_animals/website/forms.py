@@ -93,10 +93,10 @@ class OrderForm(forms.Form):
         })
 
         message = EmailMessage(
-            _('email.order.subject'),
+            ''.join(_('email.order.subject'), self.cleaned_data['name']),
             html,
-            'webmaster@cheers-development.in.ua',
-            ['webmaster@cheers-development.in.ua']
+            'webmaster@digital-animals.in.ua',
+            ['makeweb@digital-animals.in.ua']
         )
         message.content_subtype = 'html'
         message.send()
