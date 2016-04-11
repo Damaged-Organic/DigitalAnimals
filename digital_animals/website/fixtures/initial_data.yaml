@@ -120,5 +120,5 @@
 - model: website.Contact
   pk: 1
   fields:
-    email: makeweb@digital-animals.com.ua
-    phone: +380 (44) 999 99 99
+    email: makeweb@digital-animals.in.ua
+    phone: +380 (44) 353 2014

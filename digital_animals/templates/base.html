@@ -13,10 +13,12 @@
         {% block meta %}
             <meta charset="utf-8">
         {% endblock %}
+        {% block favicons %}{% endblock %}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    {% block body %}{% endblock %}
-    {% block javascripts %}{% endblock %}
+        {% block analytics %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
