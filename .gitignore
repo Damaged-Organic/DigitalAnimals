@@ -16,3 +16,6 @@ static/
 
 node_modules/
 jspm_packages/
+
+uwsgi/digital_animals.ini
+uwsgi/uwsgi_params
